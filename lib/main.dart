@@ -1,9 +1,11 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,12 +13,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CountryPage(),
+      home: const CountryPage(),
     );
   }
 }
 
 class CountryPage extends StatefulWidget {
+  const CountryPage({super.key});
+
   @override
   _CountryPageState createState() => _CountryPageState();
 }
@@ -43,23 +47,23 @@ class _CountryPageState extends State<CountryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Country Generator'),
+        title: const Text('Country Generator'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Your next destination is:',
               style: TextStyle(fontSize: 30),
             ),
             Text(
-              '$currentCountry',
-              style: TextStyle(fontSize: 50),
+              currentCountry,
+              style: const TextStyle(fontSize: 50),
             ),
             ElevatedButton(
-              child: Text('Generate next destination'),
               onPressed: generateNextDestination,
+              child: const Text('Generate next destination'),
             ),
           ],
         ),
