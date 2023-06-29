@@ -33,6 +33,10 @@ class _CountryPageState extends State<CountryPage> {
     'Germany',
     'France',
     'Japan',
+    'Italy',
+    'Denmark',
+    'Portugal',
+    'Kazakhstan',
   ];
 
   String currentCountry = 'USA';
